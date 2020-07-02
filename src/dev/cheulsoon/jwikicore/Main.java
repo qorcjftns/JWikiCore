@@ -11,15 +11,6 @@ public class Main {
 
 		String wikiText = "";
 		
-		WikiGrammar wikiGrammar = new WikiGrammar();
-		WikiParser parser = new WikiParser(wikiGrammar);
-		ParsedComponent parsedComponent = parser.parse(wikiText);
-		
-		WikiComposer wikiComposer = new WikiComposer();
-		wikiComposer.compose(parsedComponent);
-		
-		System.out.println(parsedComponent);
-		
 		
 	}
 

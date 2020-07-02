@@ -1,6 +1,8 @@
 package dev.cheulsoon.jwikicore.renderer;
 
+import dev.cheulsoon.jwikicore.composer.WikiComposer;
 import dev.cheulsoon.jwikicore.grammar.WikiGrammar;
+import dev.cheulsoon.jwikicore.parser.ParsedComponent;
 import dev.cheulsoon.jwikicore.parser.WikiParser;
 
 public class WikiRenderer {
@@ -13,9 +15,11 @@ public class WikiRenderer {
 	
 	public String render() {
 		WikiGrammar wikiGrammar = new WikiGrammar();
-		WikiParser wikiParser = new WikiParser(wikiGrammar);
+		WikiParser parser = new WikiParser(wikiGrammar);
+		ParsedComponent parsedComponent = parser.parse(this.wikiText);
 		
-		return "";
+		WikiComposer wikiComposer = new WikiComposer();
+		return wikiComposer.compose(parsedComponent);
 	}
 
 }
