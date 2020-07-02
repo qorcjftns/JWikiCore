@@ -11,6 +11,12 @@ public class WikiParser {
 		this.grammar = grammar;
 	}
 	
+	public ParsedComponent parse(String wikiText) {
+		
+		
+		return null;
+	}
+	
 	
 
 }
