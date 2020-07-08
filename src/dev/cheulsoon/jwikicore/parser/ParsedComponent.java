@@ -1,5 +1,6 @@
 package dev.cheulsoon.jwikicore.parser;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -18,6 +19,11 @@ public class ParsedComponent {
 		this.componentType = componentType;
 		this.text = text;
 		this.tag = tag;
+		this.children = new ArrayList<>();
+	}
+	
+	public void addComponent(ParsedComponent pc) {
+		this.children.add(pc);
 	}
 	
 	
