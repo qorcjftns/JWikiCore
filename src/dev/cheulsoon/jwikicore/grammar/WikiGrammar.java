@@ -21,6 +21,7 @@ public class WikiGrammar {
 		this.components.add(new Component("__", "__", "u"));
 		this.components.add(new Component("^^", "^^", "sup"));
 		this.components.add(new Component(",,", ",,", "sub"));
+		this.components.add(new Component("### ", "\n", "h2"));
 	}
 	
 	public List<Component> getComponents() {
